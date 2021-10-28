@@ -1,0 +1,26 @@
+{
+    "name": "sam-asif/sslcommerz",
+    "description": "SSLCOMMERZ is the largest payment gateway aggregator in Banglades.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "SAM\\SSLCommerz\\":"src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "asif",
+            "email": "asif.ice.pust@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra":{
+      "laravel":{
+         "providers":[
+            "SAM\\SSLCommerz\\SSLCommerzServiceProvider"
+         ]
+      }
+   }
+}
