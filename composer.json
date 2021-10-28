@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "SAM\\SSLCommerz\\":"src/"
+            "SamAsif\\Sslcommerz\\":"src/"
         }
     },
     "authors": [
@@ -19,7 +19,7 @@
     "extra":{
       "laravel":{
          "providers":[
-            "SAM\\SSLCommerz\\SSLCommerzServiceProvider"
+            "SamAsif\\Sslcommerz\\SSLCommerzServiceProvider"
          ]
       }
    }

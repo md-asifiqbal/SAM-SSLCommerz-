@@ -1,5 +1,5 @@
 <?php
-namespace SAM\SSLCommerz\Library\SslCommerz;
+namespace SamAsif\Sslcommerz\Library\SslCommerz;
 
 class SamSSL extends AbstractSslCommerz
 {
