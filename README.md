@@ -69,3 +69,71 @@ value_d
 
 Then just call the controller method.
 
+```php
+<?php
+
+use SamAsif\Sslcommerz\Http\Controllers\SamSSL;
+
+
+class OrderController extends Controller
+{
+
+ public function Order(Request $request)
+    {
+
+    	// .......
+
+    	$sslc = new SamSSL();
+        $payment_options = $sslc->index($request, 'hosted');
+
+
+
+        if (!is_array($payment_options)) {
+            print_r($payment_options);
+            $payment_options = array();
+        }
+
+    }
+
+}
+
+```
+
+If your request value dostn't  contain those key, then define an array with those key and call the controller function. 
+
+
+```php
+<?php
+
+use SamAsif\Sslcommerz\Http\Controllers\SamSSL;
+
+
+class OrderController extends Controller
+{
+
+ public function Order(Request $request)
+    {
+
+    	$post_data = array();
+        $post_data['total_amount'] = '10'; # You cant not pay less than 10
+        $post_data['currency'] = "BDT";
+        $post_data['tran_id'] = uniqid(); // tran_id must be unique
+        // .......
+    	
+
+    	$sslc = new SamSSL();
+        $payment_options = $sslc->index($post_data, 'hosted');
+
+
+
+        if (!is_array($payment_options)) {
+            print_r($payment_options);
+            $payment_options = array();
+        }
+
+    }
+
+}
+
+```
+
