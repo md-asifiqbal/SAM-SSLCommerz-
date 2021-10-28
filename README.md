@@ -121,6 +121,8 @@ class OrderController extends Controller
         // .......
     	
 
+    	// Initialize SSlcommerz gateway
+
     	$sslc = new SamSSL();
         $payment_options = $sslc->index($post_data, 'hosted');
 
@@ -133,7 +135,21 @@ class OrderController extends Controller
 
     }
 
+
+    // For received return  value
+
+    public function return(Request $request){
+      return $request->all();
+    }
+
 }
 
 ```
 
+### Web Route
+```
+Route::post('/sslcommerz/return', 'OrderController::class@return')->name('sslcommerz.return');
+
+```
+
+This route for the received the return value from SSLCommerz gateway.
