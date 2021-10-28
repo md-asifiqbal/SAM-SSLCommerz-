@@ -1,5 +1,5 @@
 <?php
-namespace SAM\SSLCommerz;
+namespace SamAsif\Sslcommerz;
 
 
 use Illuminate\Support\ServiceProvider;
